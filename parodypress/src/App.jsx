@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import ParodyButton from "./components/ParodyButton/ParodyButton";
-import NewsComparison from "./Components/NewsComparison/NewsComparison";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import ParodyButton from "./components/ParodyButton/ParodyButton.jsx";
+import NewsComparison from "./Components/NewsComparison/NewsComparison.jsx";
 
 import "./App.css";
-import IntensitySlider from "./Components/IntensitySlider/IntensitySlider";
-import ErrorMessage from "./Components/ErrorMessage/ErrorMessage";
+import IntensitySlider from "./Components/IntensitySlider/IntensitySlider.jsx";
+import ErrorMessage from "./Components/ErrorMessage/ErrorMessage.jsx";
 import { getNews } from "./scripts/index";
 
 function App() {
