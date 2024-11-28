@@ -1,2 +1,2 @@
 # ParodyPress
-An application that provides latest headlines in a Parody version.
+An application that provides latest headlines along with their Parody version.
