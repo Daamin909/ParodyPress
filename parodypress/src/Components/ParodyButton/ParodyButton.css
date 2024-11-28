@@ -1,0 +1,141 @@
+.button-container {
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+}
+
+.parodify-button {
+  background-color: var(--accent-red);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  padding: 10px 15px;
+  height: 50px;
+  width: 200px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.input-container {
+  margin: 4rem 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  max-width: 1000px;
+  gap: 1rem;
+}
+.parodify-button:hover {
+  background-color: var(--accent-blue);
+  transform: scale(1.05);
+}
+
+.parodify-button:active {
+  transform: scale(0.95);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.loading-animation {
+  margin: 2rem auto;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.newspaper {
+  width: 80px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: newspaperShake 0.5s ease-in-out infinite alternate;
+}
+
+.newspaper-content {
+  padding: 10px;
+}
+
+.line {
+  height: 2px;
+  background-color: #333;
+  margin: 10px 0;
+  animation: writeLine 1s ease-in-out infinite;
+}
+
+.pen {
+  width: 40px;
+  height: 5px;
+  background-color: var(--accent-blue);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: penWrite 1s ease-in-out infinite;
+}
+
+@keyframes newspaperShake {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes writeLine {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes penWrite {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 60px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.parody-input {
+  width: 50vw;
+  max-width: 800px;
+  padding: 15px 20px;
+  height: 25px;
+  font-size: 16px;
+  color: white;
+  margin-right: 10px;
+  background: linear-gradient(145deg, var(--secondary-bg), var(--primary-bg));
+  border: 2px solid transparent;
+  border-radius: 30px;
+  outline: none;
+  transition: all 0.1s ease-in-out;
+  border: 1px solid #2b2b2b;
+}
+
+.parody-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.parody-input:focus {
+  border-color: var(--accent-red);
+  color: white;
+  box-shadow: 0 0 10px var(--accent-red), 0 0 20px var(--accent-blue);
+}

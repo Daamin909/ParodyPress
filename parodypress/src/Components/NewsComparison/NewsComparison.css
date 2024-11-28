@@ -1,0 +1,113 @@
+.news-comparison {
+  max-width: 800px;
+  margin: 40px auto;
+  max-height: 60vh;
+  min-height: 40vh;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  background-color: var(--primary-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+.sigma-p{
+  text-align: left;
+}
+.close-button {
+  color: #797979;
+  cursor: pointer;
+  height: fit-content;
+  border-radius: 10000%;
+}
+.close-button:hover {
+  color: white;
+}
+.article-container {
+  margin-top: 25px;
+  height: 100%;
+  position: relative;
+  border: 1px solid var(--accent-red);
+  border-radius: 8px;
+  overflow: auto;
+  background-color: var(--secondary-bg);
+}
+
+.base-article,
+.overlay-article {
+  padding: 30px;
+  display: flow-root;
+  text-align: center;
+}
+
+.float-image {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  height: 200px;
+}
+.overlay-article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-bg);
+}
+
+.base-article h3,
+.overlay-article h3 {
+  font-size: 24px;
+  color: var(--accent-blue);
+  margin-bottom: 20px;
+}
+
+.base-article p,
+.overlay-article p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 10;
+}
+
+.slider-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--accent-red);
+  transform: translateX(-50%);
+  pointer-events: none;
+  transition: width 0.2s ease;
+}
+
+.slider-handle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-red);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--primary-bg);
+}
+
+.article-container:hover .slider-handle::after {
+  width: 10px;
+  height: 10px;
+}
+
+.article-container:hover .slider-handle {
+  width: 2px;
+}
