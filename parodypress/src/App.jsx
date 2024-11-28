@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "./components/Navbar/Navbar.jsx";
 import ParodyButton from "./components/ParodyButton/ParodyButton.jsx";
 import NewsComparison from "./Components/NewsComparison/NewsComparison.jsx";
 
@@ -43,7 +42,6 @@ function App() {
   };
   return (
     <div className="app">
-      <Navbar />
       <main>
         <ParodyButton
           isLoading={isLoading}
