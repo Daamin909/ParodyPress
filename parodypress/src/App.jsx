@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import ParodyButton from "./components/ParodyButton/ParodyButton.jsx";
-import NewsComparison from "./Components/NewsComparison/NewsComparison.jsx";
+import Navbar from "./components/Navbar/Navbar";
+import ParodyButton from "./components/ParodyButton/ParodyButton";
+import NewsComparison from "./Components/NewsComparison/NewsComparison";
 
 import "./App.css";
-import IntensitySlider from "./Components/IntensitySlider/IntensitySlider.jsx";
-import ErrorMessage from "./Components/ErrorMessage/ErrorMessage.jsx";
+import IntensitySlider from "./Components/IntensitySlider/IntensitySlider";
+import ErrorMessage from "./Components/ErrorMessage/ErrorMessage";
 import { getNews } from "./scripts/index";
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
   };
   return (
     <div className="app">
+      <Navbar />
       <main>
         <ParodyButton
           isLoading={isLoading}
