@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ErrorMessage.css";
 import errorSound from "../../assets/sound/error-message.mp3";
-export default function Component({ message, duration = 5000, onClose }) {
+const ErrorMessage = ({ message, duration = 5000, onClose }) => {
   const [progress, setProgress] = useState(100);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -33,4 +33,6 @@ export default function Component({ message, duration = 5000, onClose }) {
       <div className="sliding-progress" style={{ width: `${progress}%` }}></div>
     </div>
   );
-}
+};
+
+export default ErrorMessage;

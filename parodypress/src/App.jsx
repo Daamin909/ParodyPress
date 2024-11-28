@@ -8,7 +8,7 @@ import IntensitySlider from "./Components/IntensitySlider/IntensitySlider";
 import ErrorMessage from "./Components/ErrorMessage/ErrorMessage";
 import { getNews } from "./scripts/index";
 
-function App() {
+const App = () => {
   const [showNews, setShowNews] = useState(false);
   const [news, setNews] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
