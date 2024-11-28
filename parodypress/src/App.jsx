@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import ParodyButton from "./components/ParodyButton/ParodyButton";
+import Navbar from "./Components/Navbar/Navbar";
+import ParodyButton from "./Components/ParodyButton/ParodyButton";
 import NewsComparison from "./Components/NewsComparison/NewsComparison";
 
 import "./App.css";
