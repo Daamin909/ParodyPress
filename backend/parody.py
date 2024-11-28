@@ -1,9 +1,7 @@
-from dotenv import load_dotenv
 from groq import Groq
 import requests
 import os
 
-load_dotenv()
 news_api_key = os.getenv("NEWS_API")
 def makeNews(intensity, query):
     resp = requests.get(f"https://api.thenewsapi.com/v1/news/top?api_token={news_api_key}&search={query}&language=en&limit=1")
